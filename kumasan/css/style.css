@@ -113,3 +113,19 @@ nav ul li a{
     opacity: 0.4;
     z-index: 10;
 }
+
+/* メイン */
+#hero {
+    background-image: url(../images/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 540px;
+}
+.hero_inner{
+    color: azure;
+    font-size: larger;
+    font-weight: 500;
+    transform: translateY(-200px);
+    margin-left: 20px;
+    opacity: 80%;
+}
