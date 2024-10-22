@@ -1,5 +1,6 @@
 body {
     font-family: 'M PLUS 1p', sans-serif;
+    background-color: rgb(241, 209, 103);
   }
 
   img {
@@ -26,10 +27,10 @@ body {
  height: 90px;
  align-items: center;
 display: flex;
-justify-content: space-between;
 flex-wrap: wrap;
 width: 90%;
 margin: 0 auto;
+max-width: 1280px;
 }
 
 #header.active{
@@ -43,6 +44,7 @@ margin: 0 auto;
     cursor: pointer;
     position: relative;
     z-index: 30;
+    margin-right: 30px;
 }
 #hmb span{
     width: 32px;
@@ -114,12 +116,22 @@ nav ul li a{
     z-index: 10;
 }
 
+/* アコーディオンメニュー */
+.accordion-content {
+    display: none;
+    padding: 10px;
+}
+.accordion-content.active {
+    display: block;
+}
+
 /* メイン */
 #hero {
     background-image: url(../images/hero.jpg);
     background-position: center;
     background-size: cover;
     height: 540px;
+    border-radius: 5px;
 }
 .hero_inner{
     color: azure;
@@ -129,3 +141,59 @@ nav ul li a{
     margin-left: 20px;
     opacity: 80%;
 }
+h3{
+    font-size: xx-large;
+    font-weight: 600;
+    margin-top: 10px;
+}
+#text{
+    font-weight: 300;
+    font-size: large;
+    height: 160px;
+    text-align: right;
+    line-height: 1.5;
+}
+#text p{
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
+/* メニュー */
+.sub{
+    font-size: x-large;
+    font-weight: 500;
+    margin: 30px;
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+.col{
+    width: 21%;
+    position: relative;
+    cursor: pointer;
+}
+h4{
+    font-weight: 600;
+    color: rgb(19, 95, 42);
+    /* background-color: rgb(175, 247, 81); */
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    padding: 6px 10px;
+
+}
+
+/* フッター */
+/* footer {
+    height: 90px;
+    background-color: rgb(241, 209, 103);  
+    width: 90%;
+    margin: 0 auto;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */

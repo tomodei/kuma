@@ -35,8 +35,17 @@
         <nav>
             <ul>
                 <li><a href="">ホーム</a></li>
-                <li><a href="">メニュー</a></li>
-                <li><a href="">アクセス</a></li>             
+
+                <li>
+                    <div onclick="toggleAccordion()">メニュー</div>
+                    <div class="accordion-content" id="accordionContent">
+                        <p><a href="./morning.html">MORNING</a></p>
+                        <p><a href="./lunch.html">LUNCH</a></p>
+                        <p><a href="./dinner.html">DINNER</a></p>
+                    </div>
+                </li>
+
+                <li><a href="./access.html">アクセス</a></li>             
             </ul>
         </nav>
 
@@ -49,17 +58,71 @@
             <h2>どこかの森にひっそりオープン</h2>
         </div>
     </section>
+    <div id="text" class="container">
+        <h3>くまさん食堂って？</h3>
+        <p>いい匂いをたどった先にある森の中の小さな小屋。そこがくまさん食堂です。<br>
+            森の幸をたっくさん使ったおいしいお料理でお腹をいっぱいにしてください。<br>
+        くま店長</p>
+    </div>
+
+    <section class="section2">
+        <div class="container">
+            <p class="sub">MENU</p>
+            <div class="row">
+                <a href="./morning.html">
+                 <div class="col" >
+                     <img src="./images/sun.png" alt="太陽" width="100%" 
+                     style="border: 5px solid rgb(32, 179, 19);border-radius: 50px; box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);">
+                     <h4>MORNING</h4>
+                  </div> 
+                </a>
+                <a href="./lunch.html">
+                    <div class="col">
+                      <img src="./images/hiru.png" alt="花" width="100%"  
+                      style="border: 5px solid rgb(32, 179, 19);border-radius: 50px; box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);">
+                      <h4>LUNCH</h4>
+                    </div>
+                </a>
+                <a href="./dinner.html">
+                    <div class="col">
+                    <img src="./images/moon.png" alt="月" width="100%" 
+                      style="border: 5px solid rgb(32, 179, 19);border-radius: 50px; box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);">
+                      <h4>DINNER</h4>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+    
   </main>
   
-  <footer></footer>
+
+  <!-- <footer class="container">
+    <img src="./images/kuma.png" alt="くまの画像" width="40px" height="35px">
+    <div>
+       <h1><span>くまさん</span>食堂</h1>
+       <p>☎０００－０００－０００</p>
+    </div>
+
+  </footer> -->
 
   <script>
+    // ハンバーガーメニュー
     const hmbBtn = document.getElementById("hmb");
     const header = document.getElementById("header");
 
     hmbBtn.addEventListener("click", function() {
       header.classList.toggle("active");
     });
+
+    // アコーディオンメニュー
+    function toggleAccordion() {
+        const accordionContent = document.getElementById('accordionContent');
+        accordionContent.classList.toggle('active');
+    }
+
+
   </script>
   
 </body>
